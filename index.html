@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Technology/kabilan/026</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #1ec79a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #1ec79a;
+            padding: 10px;
+            text-align: center;
+        }
+        nav button {
+            background: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        section {
+            display: none;
+            padding: 20px;
+        }
+        section.active {
+            display: block;
+        }
+        footer {
+            background: #1ec79a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        a {
+            color: #1ec79a;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Web Technology </h1>
+        <p>Welcome to the Web Technology Home Page</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('syllabus')">Syllabus</button>
+        <button onclick="showSection('explanation')">Topic Explanations</button>
+        <button onclick="showSection('lab')">Lab Manual</button>
+        <button onclick="showSection('notes')">Class Notes</button>
+        <button onclick="showSection('references')">Reference Links</button>
+    </nav>
+
+    <section id="syllabus" class="active">
+        <h2>Syllabus</h2>
+        <ul>
+            <li>Introduction to Web Technologies</li>
+            <li>HTML, CSS, and JavaScript</li>
+            <li>Client-side Scripting</li>
+            <li>Server-side Scripting (PHP/Node.js)</li>
+            <li>Databases (MySQL/MongoDB)</li>
+            <li>AJAX and JSON</li>
+            <li>Web Hosting and Deployment</li>
+        </ul>
+    </section>
+
+    <section id="explanation">
+        <h2>Explanation for Each Syllabus Topic</h2>
+        <ul>
+            <li><strong>Introduction to Web Technologies:</strong> Overview of how the web works, HTTP, browsers, servers.</li>
+            <li><strong>HTML, CSS, and JavaScript:</strong> Building blocks of web pages, styling, and interactivity.</li>
+            <li><strong>Client-side Scripting:</strong> Handling events, validating forms using JavaScript.</li>
+            <li><strong>Server-side Scripting:</strong> Back-end logic, data processing using PHP or Node.js.</li>
+            <li><strong>Databases:</strong> Storing and retrieving data using MySQL or MongoDB.</li>
+            <li><strong>AJAX and JSON:</strong> Asynchronous requests, fetching dynamic content without reloading.</li>
+            <li><strong>Web Hosting and Deployment:</strong> Hosting sites on servers, GitHub Pages, Netlify, or cPanel.</li>
+        </ul>
+    </section>
+
+    <section id="lab">
+        <h2>Lab Manual</h2>
+        <ol>
+            <li>Create a basic HTML page with headings, lists, and tables.</li>
+            <li>Design a web form and validate using JavaScript.</li>
+            <li>Create a CSS-based responsive layout.</li>
+            <li>Implement a simple Node.js or PHP server.</li>
+            <li>Connect to a database and perform CRUD operations.</li>
+            <li>Use AJAX to load content dynamically.</li>
+            <li>Deploy a web application on a live server.</li>
+        </ol>
+    </section>
+
+    <section id="notes">
+        <h2>Class Notes</h2>
+        <p>Click below to download notes:</p>
+        <ul>
+            <li><a href="#">HTML & CSS Notes (PDF)</a></li>
+            <li><a href="#">JavaScript Notes (PDF)</a></li>
+            <li><a href="#">PHP Basics (PDF)</a></li>
+            <li><a href="#">Node.js & Express (PDF)</a></li>
+            <li><a href="#">AJAX & JSON (PDF)</a></li>
+            <li><a href="#">Database Connectivity (PDF)</a></li>
+        </ul>
+    </section>
+
+    <section id="references">
+        <h2>Reference Links</h2>
+        <ol>
+            <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+            <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
+            <li><a href="https://www.geeksforgeeks.org/" target="_blank">GeeksForGeeks</a></li>
+            <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+            <li><a href="https://www.tutorialspoint.com/" target="_blank">TutorialsPoint</a></li>
+            <li><a href="https://www.stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+            <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+            <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
+            <li><a href="https://www.linkedin.com/learning/" target="_blank">LinkedIn Learning</a></li>
+            <li><a href="https://www.pluralsight.com/" target="_blank">Pluralsight</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <li><a href="https://git-scm.com/" target="_blank">Git SCM</a></li>
+            <li><a href="https://netlify.com/" target="_blank">Netlify</a></li>
+            <li><a href="https://vercel.com/" target="_blank">Vercel</a></li>
+            <li><a href="https://firebase.google.com/" target="_blank">Firebase</a></li>
+            <li><a href="https://www.mysql.com/" target="_blank">MySQL Official</a></li>
+            <li><a href="https://expressjs.com/" target="_blank">Express.js</a></li>
+            <li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+            <li><a href="https://reactjs.org/" target="_blank">React.js</a></li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Web Technology Course | Designed by Kabilan</p>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
